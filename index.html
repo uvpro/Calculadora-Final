@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Calculadora de hidratación</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./styles.css">
+        <script src="./script.js" defer></script>
+    </head>
+	<body>
+        <div id="contenedor">
+            <div id="calculadora">
+                <div class="contenido">
+                    <img src="assets/calculator.png" alt="Icono Calculadora" id="calculator-icon">
+                    <h1>Hidratación Basal</h1>
+                    <p class="item">Completa todos los datos</p>
+                    <input class="item" id="peso" type="number" placeholder="Peso en kg" />
+                    <p class="item" id="error">* Debe completar todos los datos</p>
+                    <button class="item" id="calcular">Calcular</button>
+                    <p class="item resultado" id="dia"></p>
+                    <p class="item resultado" id="flu"></p>
+                    <p class="item resultado" id="man"></p>
+                </div>
+            </div>
+            <div id="detalle">
+                <div class="contenido2">
+                    <ul id="mets">
+                        <h1>¿Como se calcula?</h1>
+                        <br><li>Cuando el niño tiene hasta 30kg: Se utiliza el calculo de Holliday-Segar.</li>
+                        <br><li>Cuando el niño tiene mas de 30kg: Se calcula la hidratación basal usando el método de superficie corporal</li>
+                    </ul>
+                    <ul class="item detalle" id="met1">
+                        <h1>Método Holliday-Segar</h1>
+                        <br><li>Cuando el niño tiene hasta 10kg: 100cc por cada kilo.</li>
+                        <br><li>Luego, por cada kilo arriba de 10 y hasta 20kg, se suman 50cc.</li>
+                        <br><li>Finalmente, por cada kilo arriba de 20kg se suman 20cc.</li>
+                    </ul>
+                    <ul class=" item detalle" id="met2">
+                        <h1>Método de superficie corporal</h1>
+                        <br><li>( (peso * 4) + 7) / (peso + 90)</li>
+                        <br><li>Este resultado se multiplica por 1500 o por
+                             2000 para hallar el valor del volumen diario en cc, y el 
+                             medico decide cual de los dos resultados utilizar.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </body>      
+</html>
